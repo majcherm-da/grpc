@@ -85,6 +85,8 @@ static grpc_client_channel_factory client_channel_factory = {
 grpc_channel* grpc_insecure_channel_create(const char* target,
                                            const grpc_channel_args* args,
                                            void* reserved) {
+  printf("[FFI GRPC] - grpc_insecure_channel_create\n");
+
   grpc_core::ExecCtx exec_ctx;
   GRPC_API_TRACE(
       "grpc_insecure_channel_create(target=%s, args=%p, reserved=%p)", 3,

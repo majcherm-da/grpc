@@ -371,8 +371,7 @@ grpc_call* grpc_channel_create_pollset_set_call(
 
 void* grpc_channel_register_call(grpc_channel* channel, const char* method,
                                  const char* host, void* reserved) {
-
-  printf("grpc_channel_register_call\n");
+  printf("[FFI GRPC] - grpc_channel_register_call\n");
 
   registered_call* rc =
       static_cast<registered_call*>(gpr_malloc(sizeof(registered_call)));
