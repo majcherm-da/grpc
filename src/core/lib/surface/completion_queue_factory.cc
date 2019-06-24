@@ -65,8 +65,6 @@ grpc_completion_queue* grpc_completion_queue_create_for_next(void* reserved) {
 }
 
 grpc_completion_queue* grpc_completion_queue_create_for_pluck(void* reserved) {
-  printf("[FFI GRPC] - grpc_completion_queue_create_for_pluck\n");
-
   GPR_ASSERT(!reserved);
   grpc_completion_queue_attributes attr = {1, GRPC_CQ_PLUCK,
                                            GRPC_CQ_DEFAULT_POLLING, nullptr};
